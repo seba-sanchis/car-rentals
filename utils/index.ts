@@ -23,9 +23,9 @@ export const updateSearchParams = (type: string, value: string) => {
   searchParams.set(type, value);
 
   // Set the specified search parameter to the given value
-  const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
+  const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
 
-  return newPathname;
+  return newPathName;
 };
 
 export const deleteSearchParams = (type: string) => {
@@ -36,11 +36,11 @@ export const deleteSearchParams = (type: string) => {
   newSearchParams.delete(type.toLocaleLowerCase());
 
   // Construct the updated URL pathname with the deleted search parameter
-  const newPathname = `${
+  const newPathName = `${
     window.location.pathname
   }?${newSearchParams.toString()}`;
 
-  return newPathname;
+  return newPathName;
 };
 
 export async function fetchCars(filters: FilterProps) {
